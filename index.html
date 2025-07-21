@@ -428,7 +428,7 @@
         // Initial image load
         async function init() {
             try {
-                const response = await fetch('../photo.jpeg');
+                const response = await fetch('offwhite.jpeg');
                 const blob = await response.blob();
                 await loadImage(blob);
             } catch (error) {
