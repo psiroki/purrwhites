@@ -17,7 +17,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons&text=image,content_paste" rel="stylesheet">
     <style>
         .material-icons { font-family: 'Material Icons'; font-size: 24px; }
-        button { display: flex; align-items: center; gap: 8px; }
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -63,7 +62,7 @@
             position: relative;
             top: -1px;
         }
-        .simple-button {
+        button, .simple-button {
             cursor: pointer;
             padding: 5px 10px;
             background-color: #f0f0f0;
@@ -74,6 +73,7 @@
             -webkit-user-select: none;
             height: 38px;
             box-sizing: border-box;
+            color: #111;
         }
         .simple-button:hover {
             background-color: #e0e0e0;
@@ -252,7 +252,7 @@
                     sampleRect.style.width = `${size}px`;
                     sampleRect.style.height = `${size}px`;
                     // Update displayed sample size value
-                    document.getElementById('sampleSizeValue').textContent = size;
+                    document.getElementById('sampleSizeValue').textContent = size.toString().padStart(2, "\u2007");
                 }
             }
         }
